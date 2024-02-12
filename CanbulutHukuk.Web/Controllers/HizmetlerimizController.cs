@@ -1,9 +1,6 @@
 ﻿using CanbulutHukuk.Web.Models.CHModels;
 using CanbulutHukuk.Web.Models.ViewModels;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CanbulutHukuk.Web.Controllers
@@ -13,10 +10,7 @@ namespace CanbulutHukuk.Web.Controllers
         // GET: Hizmetlerimiz
         public ActionResult Index()
         {
-            var dataContext = new PetaPoco.Database("sqlserverce");
-            List<Category> CategoryList = dataContext.Query<Category>("Select * from Category where IsActive = 1 order by Name").ToList();
-
-            return View(CategoryList);
+            return View();
         }
 
         public ActionResult Detay(int Id)
@@ -37,6 +31,61 @@ namespace CanbulutHukuk.Web.Controllers
             //};
 
             return View(vm);
+        }
+
+        public ActionResult AileHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult BorclarHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult CezaHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult IcraIflasHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult IdareHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult IsHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult MirasHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult TasinmazHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult TicaretHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult TuketiciHukuku()
+        {
+            return View();
+        }
+
+        public ActionResult VergiHukuku()
+        {
+            return View();
         }
     }
 }

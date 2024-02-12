@@ -2,7 +2,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model List<CanbulutHukuk.Web.Models.CHModels.Category>
 <div class="page-title-section" style="background-image: url(img/bg/pagetitle.jpg);">
     <div class="container">
         <h1>Hizmetlerimiz</h1>
@@ -21,19 +20,116 @@
             <p>Uzman kadroya sahip büromuz, engin bilgi birikimiyle hukukun her alanında hizmet vermektedir.</p>
         </div>
         <div class="row mt-50">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-4 col-sm-6 col-12">
-                    <div class="service-box">
-                        <div class="service-inner-box clearfix">
-                            <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
-                            <div class="service-content-box">
-                                <h3><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = item.Id})">@item.Name</a></h3>
-                            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("AileHukuku", "Hizmetlerimiz")">Aile Hukuku</a></h3>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("BorclarHukuku", "Hizmetlerimiz")">Borçlar Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("CezaHukuku", "Hizmetlerimiz")">Ceza Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("IcraIflasHukuku", "Hizmetlerimiz")">İcra ve İflas Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("IdareHukuku", "Hizmetlerimiz")">İdare Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("IsHukuku", "Hizmetlerimiz")">İş Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("MirasHukuku", "Hizmetlerimiz")">Miras Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("TasinmazHukuku", "Hizmetlerimiz")">Taşınmaz(Gayrimenkul) Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("TicaretHukuku", "Hizmetlerimiz")">Ticaret Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("TuketiciHukuku", "Hizmetlerimiz")">Tüketici Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                        <div class="service-content-box">
+                            <h3><a href="@Url.Action("VergiHukuku", "Hizmetlerimiz")">Vergi Hukuku</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

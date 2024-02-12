@@ -17,7 +17,7 @@ namespace CanbulutHukuk.Web.Controllers
             {
                 var dataContext = new PetaPoco.Database("sqlserverce");
 
-                BlogList = dataContext.Query<Article>("Select top 3 Article.*,Category.Name as CategoryName  from Article inner join Category on Category.Id = Article.CategoryId where Article.IsActive = 1 order by Article.ReleaseDate desc").ToList();
+                //BlogList = dataContext.Query<Article>("Select top 3 Article.*,Category.Name as CategoryName  from Article inner join Category on Category.Id = Article.CategoryId where Article.IsActive = 1 order by Article.ReleaseDate desc").ToList();
             }
             catch (Exception ex)
             {

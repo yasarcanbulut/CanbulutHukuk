@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Hizmetlerimiz</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Hizmetlerimiz", new {})">Hizmetlerimiz</a></li>
+        </ul>
+    </div>
+</div>
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 text-content-big mt-20 CategoryDetay">
+                <div class="section-heading">
+                    <h4>Aile Hukuku</h4>
+                </div>
+                <div class="section-heading-line-left"></div>
+                @Html.Raw(Model.Kategori.Description)
+            </div>
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="services-single-left-box">
+                    <div class="services-single-menu">
+                        <ul> <li class="services-active"><a href="@Url.Action("AileHukuku", "Hizmetlerimiz")">Aile Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("BorclarHukuku", "Hizmetlerimiz")">Borçlar Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("CezaHukuku", "Hizmetlerimiz")">Ceza Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("IcraIflasHukuku", "Hizmetlerimiz")">İcra ve İflas Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("IdareHukuku", "Hizmetlerimiz")">İdare Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("IsHukuku", "Hizmetlerimiz")">İş Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("MirasHukuku", "Hizmetlerimiz")">Miras Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("TasinmazHukuku", "Hizmetlerimiz")">Taşınmaz(Gayrimenkul) Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("TicaretHukuku", "Hizmetlerimiz")">Ticaret Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("TuketiciHukuku", "Hizmetlerimiz")">Tüketici Hukuku</a></li> </ul>
+                        <ul> <li><a href="@Url.Action("VergiHukuku", "Hizmetlerimiz")">Vergi Hukuku</a></li> </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .CategoryDetay.text-content-big p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #555 !important;
+        line-height: 22px !important;
+        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .CategoryDetay {
+        color: #555 !important;
+        text-align: justify
+    }
+
+        .CategoryDetay.text-content-big ul {
+            padding-left: 50px !important;
+            margin-bottom: 20px !important;
+            margin-right: 15px !important;
+        }
+</style>
+

@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CanbulutHukuk.Web</RootNamespace>
     <AssemblyName>CanbulutHukuk.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -418,6 +418,7 @@
     <Content Include="Views\Hizmetlerimiz\Index.cshtml" />
     <Content Include="Views\Hizmetlerimiz\Detay.cshtml" />
     <Content Include="Views\Sevgi\Login.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\AileHukuku.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
