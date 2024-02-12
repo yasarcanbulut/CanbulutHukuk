@@ -1,7 +1,4 @@
-﻿using CanbulutHukuk.Web.Models.CHModels;
-using CanbulutHukuk.Web.Models.ViewModels;
-using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace CanbulutHukuk.Web.Controllers
 {

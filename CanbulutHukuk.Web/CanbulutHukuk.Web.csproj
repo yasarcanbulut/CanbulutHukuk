@@ -202,12 +202,13 @@
     <Content Include="img\blog-4.jpg" />
     <Content Include="img\blog-5.jpg" />
     <Content Include="img\blog-6.jpg" />
+    <Content Include="img\blog\blog1.jpg" />
+    <Content Include="img\blog\blog2.jpg" />
+    <Content Include="img\blog\blog3.jpg" />
     <Content Include="img\kurumsal.jpg" />
     <Content Include="img\list-1.jpg" />
     <Content Include="img\logos\logo.png" />
-    <Content Include="img\partner\partner1-DETAY.jpg" />
     <Content Include="img\partner\partner1.jpeg" />
-    <Content Include="img\partner\partner2.jpeg" />
     <Content Include="img\slider\slide0.jpg" />
     <Content Include="img\slider\slide13.jpg" />
     <Content Include="js\bootstrap.min.js" />
