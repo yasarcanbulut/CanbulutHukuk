@@ -1,0 +1,229 @@
+﻿@{
+    ViewBag.Title = "PostEdit";
+    ViewData["LeftMenu"] = "PostEdit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model CanbulutHukuk.Web.Models.ViewModels.PostEditVM
+
+<form method="post" enctype="multipart/form-data" id="FormPostEdit">
+    <div class="main-content-container container-fluid px-4">
+        @if (TempData["Result"] != null)
+        {
+            if (TempData["Result"].ToString() == "Success")
+            {
+                <div class=" alert alert-success alert-dismissible fade show mb-0" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <i class="fa fa-check mx-2"></i>
+                    <strong> Makale başarıyla kaydedildi.</strong>
+                </div>
+            }
+            else
+            {
+                <div class=" alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <i class="fa fa-check mx-2"></i>
+                    <strong> Makale kaydedilirken bir hata ile karşılaşıldı.</strong>
+                </div>
+            }
+        }
+        <!-- Page Header -->
+        <div class="page-header row no-gutters py-4">
+            <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <h3 class="page-title">Makale Ekle</h3>
+            </div>
+        </div>
+        <!-- End Page Header -->
+        <div class="row">
+            <div class="col-lg-9 col-md-12">
+                <!-- Add New Post Form -->
+
+                <div class="card card-small mb-3">
+                    <div class="card-body">
+
+                        <input type="hidden" name="Id" value="@Model.Post.Id" />
+                        <input type="hidden" name="ReleaseDate" value="@Model.Post.ReleaseDate" />
+                        <input type="hidden" name="ReadCount" value="@Model.Post.ReadCount" />
+                        <input type="hidden" name="LikeCount" value="@Model.Post.LikeCount" />
+                        <input type="hidden" name="UserId" value="@Model.Post.UserId" />
+                        <input type="hidden" name="Photo" value="@Model.Post.Photo" />
+                        <input type="hidden" id="IsActive" name="IsActive" value="@Model.Post.IsActive.ToString()" />
+                        <input type="hidden" id="Summary" name="Summary" value="@Model.Post.Summary" />
+
+
+                        <div class="form-group col-md-12">
+                            <label for="CategoryId">Kategori </label>
+                            <select name="CategoryId" id="CategoryId" class="form-control">
+                                @foreach (var item in Model.CategoryList)
+                                {
+                                    if (Model.Post.CategoryId == item.Id)
+                                    {
+                                        <option value="@item.Id" selected>@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="CategoryId">Başlık </label>
+                            <input class="form-control form-control-lg mb-3" type="text" name="Title" value="@Model.Post.Title">
+                        </div>
+
+                        @*<div class="form-group col-md-12">
+                            <label for="CategoryId">Özet </label>
+                            <textarea name="Summary" style="width:100%" rows="3" maxlength="300">@Model.Post.Summary</textarea>
+                        </div>*@
+
+                        <div class="form-group col-md-12">
+                            <div id="editor-container" class="add-new-post__editor mb-1">
+                                @Html.Raw(Model.Post.Content)
+                            </div>
+                            <input type="hidden" name="Content" id="Content" />
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- / Add New Post Form -->
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <!-- Post Overview -->
+                <div class='card card-small mb-3'>
+                    <div class="card-header border-bottom">
+                        <h6 class="m-0">İşlemler</h6>
+                    </div>
+                    <div class='card-body p-0'>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item p-3">
+                                <span class="d-flex mb-2">
+                                    <i class="material-icons mr-1">favorite</i>
+                                    <strong class="mr-1">Beğenme Sayısı: @Model.Post.LikeCount</strong>
+                                </span>
+                                <span class="d-flex mb-2">
+                                    <i class="material-icons mr-1">visibility</i>
+                                    <strong class="mr-1">Okunma Sayısı: @Model.Post.ReadCount</strong>
+                                </span>
+                                <span class="d-flex mb-2">
+                                    <i class="material-icons mr-1">done_outline</i>
+                                    <strong class="mr-1">Durum:</strong>
+                                    <div class="custom-control custom-toggle custom-toggle-sm mb-1">
+                                        <input type="checkbox" id="IsActiveToggle" class="custom-control-input" @(Model.Post.IsActive ? "checked" : "")>
+                                        <label class="custom-control-label" for="IsActiveToggle"></label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="col-md-12">
+                                        <div class="fileUpload" id="FileUploadArea0">
+                                            <div class="form-group form-md-line-input form-md-floating-label">
+                                                <input type="text" id="upload-text0" onclick="javascript: document.getElementById('updateInfDocss').click();" class="form-control finfotext">
+                                                <label for="upload-text0">Fotoğraf Ekle</label>
+                                                <i class="mdi-editor-attach-file uploadIcon"></i>
+                                            </div>
+                                            <input type="file" id="updateInfDocss" name="files" style="position:absolute;margin-left: -9999px;" multiple onchange="ChangeFileInputText(this);">
+                                        </div>
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex px-3">
+                                <button class="mb-2 btn btn-success mr-2" onclick="SubmitPage()">
+                                    <i class="material-icons">save</i> Kaydet
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- / Post Overview -->
+                <!-- Post Overview -->
+                @*<div class='card card-small mb-3'>
+                    <div class="card-header border-bottom">
+                        <h6 class="m-0">Etiketler</h6>
+                    </div>
+                    <div class='card-body p-0'>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-3 pb-2">
+                                <div class="custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="category1" checked>
+                                    <label class="custom-control-label" for="category1">Uncategorized</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="category2" checked>
+                                    <label class="custom-control-label" for="category2">Design</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="category3">
+                                    <label class="custom-control-label" for="category3">Development</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="category4">
+                                    <label class="custom-control-label" for="category4">Writing</label>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-1">
+                                    <input type="checkbox" class="custom-control-input" id="category5">
+                                    <label class="custom-control-label" for="category5">Books</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex px-3">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="New category" aria-label="Add new category" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-white px-2" type="button">
+                                            <i class="material-icons">add</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>*@
+                <!-- / Post Overview -->
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    function SubmitPage() {
+        var editor = new Quill('#editor-container');
+        $('#Content').val(editor.root.innerHTML);
+
+        $('#IsActive').val($('#IsActiveToggle').is(':checked'));
+
+        $('#Summary').val($('#editor-container').text());
+
+        $('#FormPostEdit').submit();
+    }
+
+    var validFileExt = ['png', 'jpg', 'jpeg'];
+    var StandartFileSize = 5;
+
+    function ChangeFileInputText(oFileInput) {
+        var file = $(oFileInput)[0].files[0];
+        var fsize = file.size;
+        var fname = file.name;
+        var ftype = fname.substring(fname.lastIndexOf(".") + 1, fname.length).toLowerCase();
+        var maxSize = 1024 * 1024 * StandartFileSize; //5mb
+        if ($.inArray(ftype, validFileExt) < 0) {
+
+            $(oFileInput).parent('div').find('.finfotext').removeClass("edited");
+            ErrorText("Geçersiz dosya formatý!");
+
+        } else if (fsize > maxSize) {
+            var Boyut = "Maksimum dosya boyutu " + StandartFileSize + "MB  aþýldý!";
+            $(oFileInput).parent('div').find('.finfotext').removeClass("edited");
+            ErrorText(Boyut);
+
+        } else {
+            $(oFileInput).parent('div').find('.finfotext').val(file.name);
+            $(oFileInput).parent('div').find('.finfotext').addClass("edited");
+        }
+    }
+
+</script>

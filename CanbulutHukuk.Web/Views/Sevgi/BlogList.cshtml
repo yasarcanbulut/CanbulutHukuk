@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "PostEdit";
+    ViewData["LeftMenu"] = "BlogList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<CanbulutHukuk.Web.Models.CHModels.Article>
+
+<div class="row">
+    <div class="col">
+        <div class="card card-small mb-4">
+            <div class="card-header border-bottom">
+                <h6 class="m-0">Kategori Listesi</h6>
+            </div>
+            <div class="card-body p-0 pb-3">
+                <table class="table mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th scope="col" class="border-0">Başlık</th>
+                            <th scope="col" class="border-0">Durum</th>
+                            <th scope="col" class="border-0">Yayınlanma Tarihi</th>
+                            <th scope="col" class="border-0">Düzenle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@(item.IsActive ? "Yayında" : "Pasif")</td>
+                            <td>@(item.ReleaseDate != null ? item.ReleaseDate.Value.ToString("dd/MM/yyyy") : "-")</td>
+                            <td>
+                                <a href="~/Sevgi/PostEdit?Id=@(item.Id)"><i class="material-icons">edit</i></a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CanbulutHukuk.Web.Models.ViewModels.HomeIndexVM
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(img/slider/slide0.jpg);">
+            <div class="container">
+                <div class="slider-content left-holder">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-12">
+                            <p class="animated fadeInDown">
+                                "Her şey kanun yapmaktan ibaret değildir.<br />
+                                Aksine her şey o kanunları uygulamak ve uygulattırmaktan ibarettir.<br />
+                                Uygulayan, yerine getiren, daima karar verenden daha kuvvetlidir."<br />
+                                <div class="clearfix"></div>
+                                <i class="pull-right animated fadeInDown" style="color: #f5f5f5;font-size: 13px;margin-top: 30px;">Mustafa Kemal ATATÜRK</i>
+                            </p>
+                        </div>
+                    </div>
+                    @*<div class="animated fadeInUp mt-30"> <a href="#contact" class="dark-button button-md">Contact us</a> </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-block-bg" style="background-image: url('img/bg/bg13.jpg'); padding: 50px 0px 90px 0px !important;">
+    <div class="container-fluid">
+        <div class="section-heading center-holder">
+            @*<span>Hukuk & Danışmanlık</span>*@
+            <h2>Canbulut Hukuk</h2>
+            <div class="section-heading-line"></div>
+            <p>Türkiye genelinde faaliyet gösteren Canbulut Hukuk Bürosu, uzmanlık gerektiren konularda<br /> hukuki danışmanlık ve avukatlık hizmeti vermektedir.</p>
+        </div>
+        <div class="row mt-40">
+            <div class="col-lg-12">
+                <div class="plane-box">
+                    <div class="plane-box-item">
+                        <span class="plane-box-decor"></span>
+                        <div class="plane-box-text">
+                            <h4><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 11 })">Aile Hukuku</a></h4>
+                            <p>Aile hukuku esas itibariyle Medeni Kanun’un Aile Hukuku balığını taşıyan ikinci kitabında düzenlenmiştir. Bunun dışında, daha birçok kanun, tüzük ve yönetmelik bu hukuk dalı ile ilgili düzenlemeler içermektedir...</p>
+                        </div>
+                    </div>
+                    <div class="plane-box-item">
+                        <span class="plane-box-decor"></span>
+                        <div class="plane-box-text">
+                            <h4><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 7 })">İş Hukuku</a></h4>
+                            <p>İş Hukuku, iş sözleşmesine dayanarak işçi ile işveren arasındaki iş ilişkilerini düzenleyen bir hukuk dalıdır. Bununla birlikte günümüzde devletin işçiyi koruma amacıyla iş ilişkilerine müdahale ettiği de bir gerçektir. Bu nedenle...</p>
+                        </div>
+                    </div>
+                    <div class="plane-box-item">
+                        <span class="plane-box-decor"></span>
+                        <div class="plane-box-text">
+                            <h4><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 10 })">Taşınmaz(Gayrimenkul)   Hukuku</a></h4>
+                            <p>Gayrimenkul hukuku, diğer adıyla taşınmaz hukuku; miras hukuku, aile hukuku, borçlar hukuku gibi 4721 sayılı Türk Medeni Kanun’unun bir alt dalı olup eşya hukuku başlığı altında düzenlenmiştir. Eşya...</p>
+                        </div>
+                    </div>
+                    <div class="plane-box-item">
+                        <span class="plane-box-decor"></span>
+                        <div class="plane-box-text">
+                            <h4><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 3 })">Ticaret Hukuku</a></h4>
+                            <p>Ticaret hukuku, ticari karakter taşıyan olaylara uygulanan hukuk dalı olup ticari nitelik taşıyan hükümlerin bir araya gelmesiyle oluşmuştur. Ticaret hukuku, esas itibariyle Ticaret Kanunu tarafından düzenlenmiştir. Ancak...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-12"> <img src="img/kurumsal.jpg" class="rounded-border shadow-primary" alt="img"> </div>
+                <div class="col-md-7 col-sm-7 col-12">
+                    <div class="pl-30-md mt-40">
+                        <div class="section-heading">
+                            <h3>Kurumsal</h3>
+                        </div><div class="section-heading-line-left"></div>
+                        <div class="text-content-big mt-20">
+                            <p>
+                                Büyük bir hızla değişen ve gelişen hukuk sistemi karşısında müvekkillerimize en verimli şekilde hizmet vermeyi amaçlayan Canbulut Hukuk, uzman kadrosu ile geniş bir yelpazede faaliyet göstermeye devam etmektedir
+                            </p>
+                        </div>
+                        <div class="mt-20">
+                            <ul class="primary-list">
+                                <li><i class="fa fa-caret-right"></i>Immigration consultant, Information technology consulting</li>
+                                <li><i class="fa fa-caret-right"></i>Consultant pharmacist Creative consultant</li>
+                                <li><i class="fa fa-caret-right"></i>Employment consultant Environmental consultant</li>
+                            </ul>
+                        </div><div class="mt-25"> <a href="#" class="primary-button button-sm mb-15-xs">Contact Us</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+<div class="section-block-parallax black-overlay-60" style="background-image: url('img/bg/bg17.jpg');">
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="pr-30-md">
+                        <div class="section-heading mt-30">
+                            <h6 class="primary-color">Canbulut Hukuk Hizmetler</h6>
+                            <h3 class="white-color">Hukukun Her Alanında Hizmet</h3>
+                            <p>Uzman kadroya sahip büromuz, engin bilgi birikimiyle hukukun her alanında hizmet vermektedir.</p>
+                        </div>
+                        <a href="#" class="primary-button button-md mt-15 mb-30">Hepsini Gör</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-block-grey">
+    <div class="container">
+        <div class="section-heading center-holder">
+            <span>Blog</span>
+            <h3>En Son Paylaşımlar</h3>
+            <div class="section-heading-line"></div>
+            <p>Sizden gelen sorular ve güncel konular hakkında aradığınız tüm soruların cevapları bulabilirsiniz.</p>
+        </div>
+        <div class="row mt-50">
+            @foreach (var item in Model.BlogList)
+            {
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="blog-grid">
+                        <div class="blog-grid-img">
+                            <img src="~/UploadImages/@(item.Photo)" alt="img">
+                            <div class="data-box-grid">
+                                <h4>@item.ReleaseDate.Value.ToString("dd")</h4>
+                                <p>@item.ReleaseDate.Value.ToString("MMM")</p>
+                            </div>
+                        </div>
+                        <div class="blog-grid-text">
+                            <h4>@item.Title</h4>
+                            <ul>
+                                <li><i class="fa fa-calendar"></i>@item.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</li>
+                                <li><i class="fa fa-list-ul"></i>@item.CategoryName</li>
+                            </ul>
+                            <p>@item.Summary ...</p>
+                            <div class="mt-20 left-holder"> <a href="@Url.Action("Sayfa", "Blog", new {Id = item.Id})" class="primary-button button-sm">Devamı</a> </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

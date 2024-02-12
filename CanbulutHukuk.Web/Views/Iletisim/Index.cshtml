@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Bize Ulaşın</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Iletisim", new {})">İletişim</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="col-md-12">
+                    <ul class="footer-list">
+                        <li><i class="fa fa-map-marker"></i> İsmetpaşa Mah. Bülent Ecevit Cd. 36 / 1 Elmadağ, ANKARA</li>
+                        <li><i class="fa fa-phone"></i> 0543 850 03 54 - 0546 573 41 52</li>
+                        <li><i class="fa fa-envelope"></i>  canbuluthukuk@gmail.com</li>
+                    </ul>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col-md-12">
+                    <div class="map-wrap" style="width:100%; height: 445px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.040815528908!2d33.23251161563807!3d39.918102793736765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4081fd8b8c408147%3A0xbd40d8f69c99bbed!2sCanbulut+Hukuk+B%C3%BCrosu!5e0!3m2!1str!2str!4v1553199571289" frameborder="0" style="width:100%; height: 445px; border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,204 @@
+﻿@using CanbulutHukuk.Web.Models.ViewModels
+@using CanbulutHukuk.Web.Models.CHModels
+
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="codepixer">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Canbulut Hukuk</title>
+    <link rel="shortcut icon" href="~/img/logos/logo-shortcut.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/css/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="~/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/rev-settings.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/css/switcher.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/slider.css">
+    <link rel="stylesheet" type="text/css" href="~/css/default.css">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" id="colors">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <meta name="keywords" content="canbulut hukuk, hukuk bürosu, ankara hukuk bürosu, elmadağ hukuk bürosu, ankara avukat, elmadağ avukat" />
+    <meta name="description" content="Ankara Elmadağ merkezli hukuk ve danışmanlık bürosu">
+</head>
+<body>
+    <div id="top-bar" class="hidden-sm-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-12">
+                    <div class="top-bar-info">
+                        <ul>
+                            @*<li><a href="tel:+905438500354"><i class="fa fa-phone"></i>+90 543 850 03 54</a></li>
+                            <li> </li>*@
+                            <li><a href="mailto:canbuluthukuk@gmail.com"><i class="fa fa-envelope"></i>canbuluthukuk@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <ul class="social-icons hidden-md-down">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/canbuluthukuk/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        @*<li><a href="#"><i class="fa fa-youtube"></i></a></li>*@
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="MobilLeftMenu">
+        <i class="fa fa-close"></i>
+        <div class="menuBox">
+            <a href="@Url.Action("Index", "Home", new {})">
+                <i class="fa fa-home"></i>
+                <span>Anasayfa</span>
+            </a>
+        </div>
+        <div class="menuBox">
+            <a href="@Url.Action("Index", "Hakkimizda", new {})">
+                <i class="fa fa-info"></i>
+                <span>Hakkımızda</span>
+            </a>
+        </div>
+        <div class="menuBox">
+            <a href="@Url.Action("Index", "Ekibimiz", new {})">
+                <i class="fa fa-users"></i>
+                <span>Ekibimiz</span>
+            </a>
+        </div>
+        <div class="menuBox">
+            <a href="@Url.Action("Index", "Hizmetlerimiz", new {})">
+                <i class="fa fa-briefcase"></i>
+                <span>Hizmetlerimiz</span>
+            </a>
+        </div>
+        <div class="menuBox">
+            <a href="@Url.Action("Index", "Blog", new {})">
+                <i class="fa fa-rss"></i>
+                <span>Blog</span>
+            </a>
+        </div>
+        <div class="menuBox">
+            <a href="@Url.Action("Index", "Iletisim", new {})">
+                <i class="fa fa-address-card"></i>
+                <span>İletişim</span>
+            </a>
+        </div>
+    </div>
+    <header>
+        <div class="navigation-fixed-wrapper">
+            <nav id="navigation4" class="container navigation navigation-landscape">
+                <div class="nav-header">
+                    <a class="nav-brand" href="@Url.Action("Index", "Home", new {})">
+                        <img src="~/img/logos/logo.png" class="main-logo" alt="logo" id="main_logo">
+                    </a>
+                    <i class="fa fa-bars" id="MobilmenuOpen" style="font-size: 28px;position: absolute;right: 15px;top: 25px;"></i>
+                </div>
+                <div class="nav-menus-wrapper" style="transition-property: none;">
+                    <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;float: right;">
+                        <li class="menu-active"><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+                        <li><a href="@Url.Action("Index", "Hakkimizda", new {})">Hakkımızda</a></li>
+                        <li><a href="@Url.Action("Index", "Ekibimiz", new {})">EKİBİMİZ</a></li>
+                        <li class="menu-has-children">
+                            <a href="@Url.Action("Index", "Hizmetlerimiz", new {})" class="sf-with-ul">HİZMETLERİMİZ</a>
+                            <ul>
+                                <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = 2})">Medeni Hukuk</a></li>
+                                <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = 3})">Aile Hukuku</a></li>
+                                <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = 4})">Borçlar Hukuku</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="@Url.Action("Index", "Blog", new {})">Blog</a></li>
+                        <li><a href="@Url.Action("Index", "Iletisim", new {})">İLETİŞİM</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-12">
+                    <h3>Kurumsal</h3>
+                    <div class="mt-25">
+                        <p class="mt-25">
+                            Büyük bir hızla değişen ve gelişen hukuk sistemi karşısında müvekkillerine en verimli şekilde hizmet vermeyi amaçlayan Canbulut Hukuk, uzman kadrosu ile geniş bir yelpazede faaliyet göstermeye devam etmektedir
+                        </p>
+                        <div class="footer-social-icons mt-25">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/canbuluthukuk/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                @*<li><a href="#"><i class="fa fa-youtube"></i></a></li>*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul class="footer-list">
+                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 11 })">Aile Hukuku</a></li>
+                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 7 })">İş Hukuku</a></li>
+                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 10 })">Taşınmaz(Gayrimenkul) Hukuku</a></li>
+                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 3 })">Ticaret Hukuku</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <h3>İletişim</h3>
+                    <ul class="footer-list">
+                        <li><i class="fa fa-map-marker"></i> İsmetpaşa Mah. Bülent Ecevit Cd. 36 / 1 Elmadağ, ANKARA</li>
+                        <li><i class="fa fa-phone"></i> 0543 850 03 54 - 0546 573 41 52</li>
+                        <li><i class="fa fa-envelope"></i>  canbuluthukuk@gmail.com</li>
+                    </ul>
+                </div>
+            </div><div class="footer-bar"> <p>© 2019 Copyright <span class="primary-color">Canbulut Hukuk</span> </p></div>
+        </div>
+    </footer>
+
+
+    <a href="#" class="scroll-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/navigation.js"></script>
+    <script src="~/js/navigation.fixed.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/tabs.min.js"></script>
+    <script src="~/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="~/js/swiper.min.js"></script>
+    <script src="~/js/switcher.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <script src="~/js/utils.js"></script>
+    <script src="~/js/main.js"></script>
+    <script>
+        $("#MobilmenuOpen").on("click", function () {
+            $("#MobilLeftMenu").css("display", "block");
+        });
+        $("#MobilLeftMenu i.fa.fa-close").on("click", function () {
+            $("#MobilLeftMenu").css("display", "none");
+            $(".nav-overlay-panel").remove();
+        });
+    </script>
+</body>
+</html> 

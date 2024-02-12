@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Kategori Ekle";
+    ViewData["LeftMenu"] = "CategoryEdit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model CanbulutHukuk.Web.Models.CHModels.Category
+<div class="main-content-container container-fluid px-4">
+    @if (TempData["Result"] != null)
+    {
+        if (TempData["Result"].ToString() == "Success")
+        {
+            <div class=" alert alert-success alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <i class="fa fa-check mx-2"></i>
+                <strong> Kategori kaydedildi.</strong>
+            </div>
+        }
+        else
+        {
+            <div class=" alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <i class="fa fa-check mx-2"></i>
+                <strong>Kategori kaydedilirken bir hata ile karşılaşıldı.</strong> 
+            </div>
+        }
+    }
+    <!-- Page Header -->
+    <div class="page-header row no-gutters py-4">
+        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+            <h3 class="page-title">Kategori Ekle</h3>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    <div class="row">
+        <div class="col-lg-9 col-md-12">
+            <!-- Add New Post Form -->
+            <div class="card card-small mb-3">
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data" id="FormCategoryEdit">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                        <input type="hidden" id="IsActive" name="IsActive" value="@Model.IsActive" />
+                        <div class="form-group col-md-12">
+                            <label for="CategoryId">Kategori Adı </label>
+
+                            <input class="form-control form-control-lg mb-3" type="text" name="Name" value="@Model.Name">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="CategoryId">Açıklama </label>
+
+                            <div id="editor-container" class="add-new-post__editor mb-1">
+                                @Html.Raw(Model.Description)
+                            </div>
+                            <input type="hidden" name="Description" id="Description" />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="custom-control custom-toggle custom-toggle-sm mb-1">
+                                <input type="checkbox" id="IsActiveToggle" class="custom-control-input" @(Model.IsActive ? "checked" : "")>
+                                <label class="custom-control-label" for="IsActiveToggle">Aktif</label>
+                            </div>
+                        </div>
+                        <button class="mb-2 btn btn-success mr-2" onclick="SubmitPage()">
+                            <i class="material-icons">save</i> Kaydet
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function SubmitPage() {
+        var editor = new Quill('#editor-container');
+        $('#Description').val(editor.root.innerHTML);
+        $('#IsActive').val($('#IsActiveToggle').is(':checked'));
+
+        $('#FormCategoryEdit').submit();
+    }
+</script>

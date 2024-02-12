@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CanbulutHukuk.Web.Models.ViewModels.CategoryDetayVM
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Hizmetlerimiz</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Hizmetlerimiz", new {})">Hizmetlerimiz</a></li>
+        </ul>
+    </div>
+</div>
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 text-content-big mt-20 CategoryDetay">
+                <div class="section-heading">
+                    <h4>@Model.Kategori.Name</h4>
+                </div>
+                <div class="section-heading-line-left"></div>
+                @Html.Raw(Model.Kategori.Description)
+            </div>
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="services-single-left-box">
+                    <div class="services-single-menu">
+                        <ul>
+                            @foreach (var item in Model.CategoryList)
+                            {
+                                if (item.Id == Model.Kategori.Id)
+                                {
+                                    <li class="services-active"><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = item.Id})">@item.Name</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = item.Id})">@item.Name</a></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .CategoryDetay.text-content-big p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #555 !important;
+        line-height: 22px !important;
+        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .CategoryDetay {
+        color: #555 !important;
+        text-align: justify
+    }
+
+        .CategoryDetay.text-content-big ul {
+            padding-left: 50px !important;
+            margin-bottom: 20px !important;
+            margin-right: 15px !important;
+        }
+</style>

@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CanbulutHukuk.Web.Models.ViewModels.BlogSayfaVM
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Blog Detay</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Blog", new {})">Blog Yazılarımız</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 pr-30-md">
+                <div class="pr-30-md">
+                    <div class="section-heading">
+                        <h4>@Model.Post.Title</h4>
+                    </div>
+                    <div class="section-heading-line-left"></div>
+                    <div class="text-content-big mt-20 BlogDetay">
+                        <img src="~/UploadImages/@(Model.Post.Photo)" />
+                        <br />
+                        <ul style="padding-left: 0 !important; display:block; margin-top:20px; margin-bottom:10px;font-size: 13px;color: #d21e2b;">
+                            <li class="pull-left"><i class="fa fa-calendar"></i> @Model.Post.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</li>
+                            <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i> @Model.Post.CategoryName</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <br />
+                        @Html.Raw(Model.Post.Content)
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="blog-list-right">
+                    @*<div id="search-input">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Ara">
+                            <span class="input-group-btn">
+                                <button class="btn" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                            </span>
+                        </div>
+                    </div>*@
+                    <div class="blog-list-left-heading">
+                        <h4>Kategoriler</h4>
+                    </div>
+                    <div class="blog-categories">
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Blog", new {Category = -1})">Tüm Kategoriler</a></li>
+                            @foreach (var item in Model.CategoryList)
+                            {
+                                <li><a href="@Url.Action("Index", "Blog", new {Category = item.Id})">@item.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="blog-list-left-heading">
+                        <h4>Son Yazılar</h4>
+                    </div>
+                    @foreach (var item in Model.LastBlogList)
+                    {
+                        <div class="latest-posts">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/UploadImages/@(item.Photo)" alt="blog-img"> </div>
+                                <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                    <a href="@Url.Action("Sayfa", "Blog", new {Id = item.Id})">@item.Title</a>
+                                    <span>@item.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    @*<div class="blog-list-left-heading">
+                            <h4>Tags</h4>
+                        </div>
+                        <div class="mt-10">
+                            <a href="#" class="button-tag primary-button">Funding</a>
+                            <a href="#" class="button-tag primary-button">Merchant</a>
+                            <a href="#" class="button-tag primary-button">Job</a>
+                            <a href="#" class="button-tag primary-button">Wallet</a>
+                            <a href="#" class="button-tag primary-button">Technology</a>
+                            <a href="#" class="button-tag primary-button">Coin</a>
+                            <a href="#" class="button-tag primary-button">Funding</a>
+                            <a href="#" class="button-tag primary-button">Transaction</a>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .BlogDetay.text-content-big p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #555 !important;
+        line-height: 22px !important;
+        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .BlogDetay {
+        color: #555 !important;
+        text-align:justify
+    }
+
+        .BlogDetay.text-content-big ul {
+            padding-left: 50px !important;
+            margin-bottom: 20px !important;
+            margin-right: 15px !important;
+        }
+</style>

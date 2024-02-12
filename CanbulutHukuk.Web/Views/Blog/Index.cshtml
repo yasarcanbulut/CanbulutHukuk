@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CanbulutHukuk.Web.Models.ViewModels.BlogIndexVm
+
+<div class="page-title-section" style="background-image: url(img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Son Paylaşımlarımız</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Blog", new {})">Blog</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 pr-30-md">
+                @foreach (var item in Model.BlogList)
+                {
+                    <div class="blog-list-simple">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-12">
+                                <div class="blog-list-simple-img">
+                                    <img src="~/UploadImages/@(item.Photo)" alt="img">
+                                    <div class="data-box-simple">
+                                        <h4>@item.ReleaseDate.Value.ToString("dd")</h4>
+                                        <p>@item.ReleaseDate.Value.ToString("MMM")</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-7 col-12">
+                                <div class="blog-list-simple-text"> 
+                                    <h4>@item.Title</h4>
+                                    <ul>
+                                        <li class="pull-left"><i class="fa fa-calendar"></i> @item.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</li>
+                                        <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i> @item.CategoryName</li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <p style="text-align:justify">@item.Summary</p>
+                                    <div class="mt-20 left-holder" >
+                                        <a href="@Url.Action("Sayfa", "Blog", new {Id = item.Id})" class="primary-button button-sm pull-right">Detay</a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="blog-list-right">
+                    @*<div id="search-input">
+                        <div class="input-group">
+                            <form method="post" class="example" enctype="multipart/form-data" id="formSearch" asp-controller="Blog" asp-action="Index">
+                                <input type="text" class="form-control" placeholder="Ara">
+                                <span class="input-group-btn">
+                                    <button class="btn" type="button" onclick="$('#formSearch').submit();"><i class="glyphicon glyphicon-search"></i></button>
+                                </span>
+                            </form>
+                        </div>
+                    </div>*@
+                    <div class="blog-list-left-heading">
+                        <h4>Kategoriler</h4>
+                    </div>
+                    <div class="blog-categories">
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Blog", new {Category = -1})">Tüm Kategoriler</a></li>
+                            @foreach (var item in Model.CategoryList)
+                            {
+                                <li><a href="@Url.Action("Index", "Blog", new {Category = item.Id})">@item.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="blog-list-left-heading">
+                        <h4>Son Yazılar</h4>
+                    </div>
+                    @foreach (var item in Model.LastBlogList)
+                    {
+                        <div class="latest-posts">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/UploadImages/@(item.Photo)" alt="blog-img"> </div>
+                                <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                    <a href="@Url.Action("Sayfa", "Blog", new {Id = item.Id})">@item.Title</a>
+                                    <span>@item.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    @*<div class="blog-list-left-heading">
+                            <h4>Tags</h4>
+                        </div>
+                        <div class="mt-10">
+                            <a href="#" class="button-tag primary-button">Funding</a>
+                            <a href="#" class="button-tag primary-button">Merchant</a>
+                            <a href="#" class="button-tag primary-button">Job</a>
+                            <a href="#" class="button-tag primary-button">Wallet</a>
+                            <a href="#" class="button-tag primary-button">Technology</a>
+                            <a href="#" class="button-tag primary-button">Coin</a>
+                            <a href="#" class="button-tag primary-button">Funding</a>
+                            <a href="#" class="button-tag primary-button">Transaction</a>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

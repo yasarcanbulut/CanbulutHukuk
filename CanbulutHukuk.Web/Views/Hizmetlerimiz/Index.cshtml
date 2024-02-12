@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<CanbulutHukuk.Web.Models.CHModels.Category>
+<div class="page-title-section" style="background-image: url(img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Hizmetlerimiz</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Hizmetlerimiz", new {})">Hizmetlerimiz</a></li>
+        </ul>
+    </div>
+</div>
+<div class="section-block">
+    <div class="container">
+        <div class="section-heading center-holder">
+            <span>Canbulut Hukuk & Danışmanlık</span>
+            <h3>Hukukun Her Alanında Hizmet</h3>
+            <div class="section-heading-line"></div>
+            <p>Uzman kadroya sahip büromuz, engin bilgi birikimiyle hukukun her alanında hizmet vermektedir.</p>
+        </div>
+        <div class="row mt-50">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="service-box">
+                        <div class="service-inner-box clearfix">
+                            <div class="service-icon-box"> <i class="fa fa-briefcase"></i> </div>
+                            <div class="service-content-box">
+                                <h3><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = item.Id})">@item.Name</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- End home-about Area -->
+<style>
+    .service-box h3 {
+        color: #111;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .service-inner-box {
+        padding: 20px 20px 20px 20px !important;
+    }
+</style>

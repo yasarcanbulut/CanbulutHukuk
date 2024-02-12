@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <title>Canbulut Hukuk</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/login/hamburgers.min.css" rel="stylesheet" />
+    <link href="~/css/login/animsition.min.css" rel="stylesheet" />
+    <link href="~/css/login/select2.min.css" rel="stylesheet" />
+
+    <link href="~/css/login/util.css" rel="stylesheet" />
+    <link href="~/css/login/main.css" rel="stylesheet" />
+
+    @*<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">*@
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+                    <span class="login100-form-title">
+                        Giriş Yap
+                    </span>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Kullanıcı Adı Giriniz">
+                        <input class="input100" type="text" name="TcKimlikNo" placeholder="Kullanıcı Adı">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Şifre Giriniz">
+                        <input class="input100" type="password" name="Password" placeholder="Şifre">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <br />
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
+                            Giriş
+                        </button>
+                    </div>
+                    @if (TempData["Result"] != null)
+                    {
+                        <div class="text-right p-t-13 p-b-23">
+                            <span class="txt1 red">
+                                *@TempData["Message"]
+                            </span>
+                        </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/login/jquery-3.2.1.min.js"></script>
+    <script src="~/js/login/animsition.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/login/select2.min.js"></script>
+    <script src="~/js/login/countdowntime.js"></script>
+    <script src="~/js/login/main.js"></script>
+
+    <!--===============================================================================================-->
+    @*<script src="vendor/daterangepicker/moment.min.js"></script>
+        <script src="vendor/daterangepicker/daterangepicker.js"></script>*@
+
+</body>
+</html>
