@@ -117,10 +117,9 @@
                         <li class="menu-has-children">
                             <a href="@Url.Action("Index", "Hizmetlerimiz", new {})" class="sf-with-ul">HİZMETLERİMİZ</a>
                             <ul>
-                                <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = 2})">Medeni Hukuk</a></li>
-                                <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = 3})">Aile Hukuku</a></li>
-                                <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new {Id = 4})">Borçlar Hukuku</a></li>
-
+                                <li><a href="@Url.Action("AileHukuku", "Hizmetlerimiz")">Aile Hukuku</a></li>
+                                <li><a href="@Url.Action("BorclarHukuku", "Hizmetlerimiz")">Borçlar Hukuku</a></li>
+                                <li><a href="@Url.Action("TicaretHukuku", "Hizmetlerimiz")">Ticaret Hukuku</a></li>
                             </ul>
                         </li>
                         <li><a href="@Url.Action("Index", "Blog", new {})">Blog</a></li>
@@ -145,10 +144,10 @@
                         </p>
                         <div class="footer-social-icons mt-25">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.facebook.com/people/Canbulut-Hukuk-Dan%C4%B1%C5%9Fmanl%C4%B1k/100054226852177/"><i class="fa fa-facebook"></i></a></li>
                                 @*<li><a href="#"><i class="fa fa-twitter"></i></a></li>*@
                                 <li><a href="https://www.instagram.com/canbuluthukuk/"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/b%C3%BC%C5%9Fra-kesik-canbulut-ll-m-013878125/"><i class="fa fa-linkedin"></i></a></li>
                                 @*<li><a href="#"><i class="fa fa-youtube"></i></a></li>*@
                             </ul>
                         </div>
@@ -157,10 +156,10 @@
                 <div class="col-md-3 col-sm-6 col-12">
                     <h3>Hizmetlerimiz</h3>
                     <ul class="footer-list">
-                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 11 })">Aile Hukuku</a></li>
-                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 7 })">İş Hukuku</a></li>
-                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 10 })">Taşınmaz(Gayrimenkul) Hukuku</a></li>
-                        <li><a href="@Url.Action("Detay", "Hizmetlerimiz", new { Id = 3 })">Ticaret Hukuku</a></li>
+                        <li><a href="@Url.Action("AileHukuku", "Hizmetlerimiz")">Aile Hukuku</a></li>
+                        <li><a href="@Url.Action("IsHukuku", "Hizmetlerimiz")">İş Hukuku</a></li>
+                        <li><a href="@Url.Action("TasinmazHukuku", "Hizmetlerimiz")">Taşınmaz(Gayrimenkul) Hukuku</a></li>
+                        <li><a href="@Url.Action("TicaretHukuku", "Hizmetlerimiz")">Ticaret Hukuku</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">

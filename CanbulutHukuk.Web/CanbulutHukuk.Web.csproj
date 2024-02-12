@@ -419,6 +419,16 @@
     <Content Include="Views\Hizmetlerimiz\Detay.cshtml" />
     <Content Include="Views\Sevgi\Login.cshtml" />
     <Content Include="Views\Hizmetlerimiz\AileHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\BorclarHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\CezaHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\IcraIflasHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\IdareHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\IsHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\MirasHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\TasinmazHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\TicaretHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\TuketiciHukuku.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\VergiHukuku.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
