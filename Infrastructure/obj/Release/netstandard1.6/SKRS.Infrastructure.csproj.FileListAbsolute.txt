@@ -1,0 +1,9 @@
+D:\Projects\SKRS\SKRS\Infrastructure\bin\Release\netstandard1.6\SKRS.Infrastructure.deps.json
+D:\Projects\SKRS\SKRS\Infrastructure\bin\Release\netstandard1.6\SKRS.Infrastructure.dll
+D:\Projects\SKRS\SKRS\Infrastructure\bin\Release\netstandard1.6\SKRS.Infrastructure.pdb
+D:\Projects\SKRS\SKRS\Infrastructure\obj\Release\netstandard1.6\SKRS.Infrastructure.csprojAssemblyReference.cache
+D:\Projects\SKRS\SKRS\Infrastructure\obj\Release\netstandard1.6\SKRS.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projects\SKRS\SKRS\Infrastructure\obj\Release\netstandard1.6\SKRS.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\SKRS\SKRS\Infrastructure\obj\Release\netstandard1.6\SKRS.Infrastructure.AssemblyInfo.cs
+D:\Projects\SKRS\SKRS\Infrastructure\obj\Release\netstandard1.6\SKRS.Infrastructure.dll
+D:\Projects\SKRS\SKRS\Infrastructure\obj\Release\netstandard1.6\SKRS.Infrastructure.pdb

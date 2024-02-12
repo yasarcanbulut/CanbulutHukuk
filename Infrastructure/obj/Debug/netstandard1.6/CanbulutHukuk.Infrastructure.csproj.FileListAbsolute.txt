@@ -1,0 +1,4 @@
+D:\ProjectsCH\CanbulutHukuk\Infrastructure\obj\Debug\netstandard1.6\CanbulutHukuk.Infrastructure.csprojAssemblyReference.cache
+D:\ProjectsCH\CanbulutHukuk\Infrastructure\obj\Debug\netstandard1.6\CanbulutHukuk.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ProjectsCH\CanbulutHukuk\Infrastructure\obj\Debug\netstandard1.6\CanbulutHukuk.Infrastructure.AssemblyInfoInputs.cache
+D:\ProjectsCH\CanbulutHukuk\Infrastructure\obj\Debug\netstandard1.6\CanbulutHukuk.Infrastructure.AssemblyInfo.cs
