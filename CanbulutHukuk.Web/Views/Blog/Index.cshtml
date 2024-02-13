@@ -2,14 +2,13 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model CanbulutHukuk.Web.Models.ViewModels.BlogIndexVm
 
 <div class="page-title-section" style="background-image: url(img/bg/pagetitle.jpg);">
     <div class="container">
         <h1>Son Paylaşımlarımız</h1>
         <ul>
             <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
-            <li><a href="@Url.Action("Index", "Blog", new {})">Blog</a></li>
+            <li><a href="@Url.Action("Index", "Blog", new {})">Blog Yazılarımız</a></li>
         </ul>
     </div>
 </div>
@@ -18,95 +17,212 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-sm-8 col-12 pr-30-md">
-                @foreach (var item in Model.BlogList)
-                {
-                    <div class="blog-list-simple">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-5 col-12">
-                                <div class="blog-list-simple-img">
-                                    <img src="~/UploadImages/@(item.Photo)" alt="img">
-                                    <div class="data-box-simple">
-                                        <h4>@item.ReleaseDate.Value.ToString("dd")</h4>
-                                        <p>@item.ReleaseDate.Value.ToString("MMM")</p>
-                                    </div>
+                <div class="blog-list-simple">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-12">
+                            <div class="blog-list-simple-img">
+                                <img src="~/img/blog/ucak.jpg" alt="img">
+                                <div class="data-box-simple">
+                                    <h4>21</h4>
+                                    <p>MAR</p>
                                 </div>
                             </div>
-                            <div class="col-md-7 col-sm-7 col-12">
-                                <div class="blog-list-simple-text"> 
-                                    <h4>@item.Title</h4>
-                                    <ul>
-                                        <li class="pull-left"><i class="fa fa-calendar"></i> @item.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</li>
-                                        <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i> @item.CategoryName</li>
-                                    </ul>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-12">
+                            <div class="blog-list-simple-text">
+                                <h4>BEDELLİ ASKERLİKTE KIDEM TAZMİNATI</h4>
+                                <ul>
+                                    <li class="pull-left"><i class="fa fa-calendar"></i> Mar 21, 2019</li>
+                                    <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i>  İş Hukuku</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p style="text-align:justify">7146 sayılı kanun ile birlikte gündeme gelen bedelli askerlik uygulaması, işçinin bu sebeple iş akdini feshetmesi halinde kıdem tazminatına hak kazanıp kazanamayacağı tartışmalarını da başlatmıştır. İşbu kanun ile yapılan düzenlemeye göre ödenecek bedel yanında 21 gün askeri temel eğitim yapılarak</p>
+                                <div class="mt-20 left-holder">
+                                    <a href="@Url.Action("bedelli_askerlikte_kidem_tazminati", "Blog")" class="primary-button button-sm pull-right">Detay</a>
                                     <div class="clearfix"></div>
-                                    <p style="text-align:justify">@item.Summary</p>
-                                    <div class="mt-20 left-holder" >
-                                        <a href="@Url.Action("Sayfa", "Blog", new {Id = item.Id})" class="primary-button button-sm pull-right">Detay</a>
-                                        <div class="clearfix"></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                }
+                </div>
+                <div class="blog-list-simple">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-12">
+                            <div class="blog-list-simple-img">
+                                <img src="~/img/blog/coin.jpg" alt="img">
+                                <div class="data-box-simple">
+                                    <h4>07</h4>
+                                    <p>MAY</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-12">
+                            <div class="blog-list-simple-text">
+                                <h4>BORÇLUNUN TEMERRÜDÜNDE SÖZLEŞMEDEN DÖNME</h4>
+                                <ul>
+                                    <li class="pull-left"><i class="fa fa-calendar"></i> May 07, 2019</li>
+                                    <li class="pull-left" style="margin-left:25px;">
+                                        <i class="fa fa-list-ul"></i>  Borçlar Hukuku</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p style="text-align:justify">
+                                    Muaccel bir borcun borçlu tarafından borç ilişkisine uygun olarak yerine getirilmemesine borçlunun temerrüdü denmektedir. TBK m.117’de bu durum açıkça hükme bağlanmıştır. Buna göre, borçlunun temerrüde düşebilmesi için borcun muaccel hale gelmiş olması başlıca şarttır. Burada borçlu, edimini yerine                                </p>
+                                <div class="mt-20 left-holder">
+                                    <a href="@Url.Action("borclunun_temeddudunde_sozlesmeden_donme", "Blog")" class="primary-button button-sm pull-right">Detay</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-list-simple">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-12">
+                            <div class="blog-list-simple-img">
+                                <img src="~/img/blog/sozlesme.jpg" alt="img">
+                                <div class="data-box-simple">
+                                    <h4>13</h4>
+                                    <p>HAZ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-12">
+                            <div class="blog-list-simple-text">
+                                <h4>CEZA KOŞULU</h4>
+                                <ul>
+                                    <li class="pull-left"><i class="fa fa-calendar"></i> Haz 13, 2019</li>
+                                    <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i>  Borçlar Hukuku</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p style="text-align:justify">Ceza koşulu, alacaklının uğraması muhtemel zararlarını güvence altına almak amacıyla tarafların anlaşması sonucu sözleşmeye eklenmiş bir yaptırımdır. Burada ceza koşulunun genel olarak “teminat” özelliğinden bahsetmek mümkün olacaktır.Ceza koşulu, asıl alacağa bağlı fer’î bir alacaktır. Bu doğrultu</p>
+                                <div class="mt-20 left-holder">
+                                    <a href="@Url.Action("ceza_kosulu", "Blog")" class="primary-button button-sm pull-right">Detay</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-list-simple">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-12">
+                            <div class="blog-list-simple-img">
+                                <img src="~/img/blog/hand-wash.jpg" alt="img">
+                                <div class="data-box-simple">
+                                    <h4>24</h4>
+                                    <p>MAR</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-12">
+                            <div class="blog-list-simple-text">
+                                <h4>COVID-19 SALGINI KARŞISINDA İŞÇİ-İŞVEREN İLİŞKİSİ</h4>
+                                <ul>
+                                    <li class="pull-left"><i class="fa fa-calendar"></i> Mar 24, 2020</li>
+                                    <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i>  İş Hukuku</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p style="text-align:justify">COVID-19 salgını sebebiyle işçi-işveren ilişkisinde bazı değişiklikler meydana geldiğini gözlemlemekteyiz. Zira bahsi geçen salgın Dünya Sağlık Örgütü tarafından pandemi olarak ilan edilmiş ve tüm Dünya’yı etkisi altına almıştır. Bu kapsamda karantina uygulamaları başlatılmış, belirli şartları taşı</p>
+                                <div class="mt-20 left-holder">
+                                    <a href="@Url.Action("covid19_salgini_karsisinda_isci_isveren_iliskisi", "Blog")" class="primary-button button-sm pull-right">Detay</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-list-simple">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-12">
+                            <div class="blog-list-simple-img">
+                                <img src="~/img/blog/market.png" alt="img">
+                                <div class="data-box-simple">
+                                    <h4>27</h4>
+                                    <p>KAS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-12">
+                            <div class="blog-list-simple-text">
+                                <h4>TÜKETİCİ SENEDİ NASIL OLMALIDIR?</h4>
+                                <ul>
+                                    <li class="pull-left"><i class="fa fa-calendar"></i> Kas 27, 2019</li>
+                                    <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i>  Tüketici Hukuku</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p style="text-align:justify">Tüketici olarak günlük hayatımızda taksitle birçok alışveriş yapmaktayız. Bu alışverişlerin bir kısmında ise satıcı, ürünü teslim etmeden önce “senet” talep etmektedir. Peki nedir bu senetlerin hukuki mahiyeti?Satıcıların tarafımıza imzalattığı senetlerin aslında neredeyse her kırtasiyede satılan “</p>
+                                <div class="mt-20 left-holder">
+                                    <a href="@Url.Action("tuketici_senedi_nasil_olmalidir", "Blog")" class="primary-button button-sm pull-right">Detay</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-list-simple">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-12">
+                            <div class="blog-list-simple-img">
+                                <img src="~/img/blog/gemi.jpg" alt="img">
+                                <div class="data-box-simple">
+                                    <h4>22</h4>
+                                    <p>KAS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-12">
+                            <div class="blog-list-simple-text">
+                                <h4>GEMİ ADAMI ALACAKLARI, İHTİYATİ HACİZ VE REHİN</h4>
+                                <ul>
+                                    <li class="pull-left"><i class="fa fa-calendar"></i> Kas 22, 2019</li>
+                                    <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i>  İş Hukuku</li>
+                                </ul>
+                                <div class="clearfix"></div>
+                                <p style="text-align:justify">1.GEMİ ADAMI KİMDİR?Biş iş akdine bağlı olarak gemide çalışan işçilerin gemi adamı sayılabilmesi ve haklarında Deniz İş Kanunu’nun uygulanabilmesi için bir takım özel şartlar aranmıştır. Buna göre, gemide çalışan bir işçinin gemi adamı sayılabilmesi ve hakkında Deniz İş Kanunu’nun uygulanabilmesi</p>
+                                <div class="mt-20 left-holder">
+                                    <a href="@Url.Action("gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin", "Blog")" class="primary-button button-sm pull-right">Detay</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-4 col-12">
                 <div class="blog-list-right">
-                    @*<div id="search-input">
-                        <div class="input-group">
-                            <form method="post" class="example" enctype="multipart/form-data" id="formSearch" asp-controller="Blog" asp-action="Index">
-                                <input type="text" class="form-control" placeholder="Ara">
-                                <span class="input-group-btn">
-                                    <button class="btn" type="button" onclick="$('#formSearch').submit();"><i class="glyphicon glyphicon-search"></i></button>
-                                </span>
-                            </form>
-                        </div>
-                    </div>*@
-                    <div class="blog-list-left-heading">
-                        <h4>Kategoriler</h4>
-                    </div>
-                    <div class="blog-categories">
-                        <ul>
-                            <li><a href="@Url.Action("Index", "Blog", new {Category = -1})">Tüm Kategoriler</a></li>
-                            @foreach (var item in Model.CategoryList)
-                            {
-                                <li><a href="@Url.Action("Index", "Blog", new {Category = item.Id})">@item.Name</a></li>
-                            }
-                        </ul>
-                    </div>
                     <div class="blog-list-left-heading">
                         <h4>Son Yazılar</h4>
                     </div>
-                    @foreach (var item in Model.LastBlogList)
-                    {
-                        <div class="latest-posts">
-                            <div class="row">
-                                <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/UploadImages/@(item.Photo)" alt="blog-img"> </div>
-                                <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
-                                    <a href="@Url.Action("Sayfa", "Blog", new {Id = item.Id})">@item.Title</a>
-                                    <span>@item.ReleaseDate.Value.ToString("MMM dd, yyyy", new System.Globalization.CultureInfo("tr-TR"))</span>
-                                </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/hand-wash.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("covid19_salgini_karsisinda_isci_isveren_iliskisi", "Blog")">COVID-19 SALGINI KARŞISINDA İŞÇİ-İŞVEREN İLİŞKİSİ</a>
+                                <span>Mar 24, 2020</span>
                             </div>
                         </div>
-                    }
-
-                    @*<div class="blog-list-left-heading">
-                            <h4>Tags</h4>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/market.png" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("tuketici_senedi_nasil_olmalidir", "Blog")">TÜKETİCİ SENEDİ NASIL OLMALIDIR?</a>
+                                <span>Kas 27, 2019</span>
+                            </div>
                         </div>
-                        <div class="mt-10">
-                            <a href="#" class="button-tag primary-button">Funding</a>
-                            <a href="#" class="button-tag primary-button">Merchant</a>
-                            <a href="#" class="button-tag primary-button">Job</a>
-                            <a href="#" class="button-tag primary-button">Wallet</a>
-                            <a href="#" class="button-tag primary-button">Technology</a>
-                            <a href="#" class="button-tag primary-button">Coin</a>
-                            <a href="#" class="button-tag primary-button">Funding</a>
-                            <a href="#" class="button-tag primary-button">Transaction</a>
-                        </div>*@
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/gemi.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin", "Blog")">GEMİ ADAMI ALACAKLARI, İHTİYATİ HACİZ VE REHİN</a>
+                                <span>Kas 22, 2019</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Blog Detay</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Blog", new {})">Blog Yazılarımız</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 pr-30-md">
+                <div class="pr-30-md">
+                    <div class="section-heading">
+                        <h4>TÜKETİCİ SENEDİ NASIL OLMALIDIR?</h4>
+                    </div>
+                    <div class="section-heading-line-left"></div>
+                    <div class="text-content-big mt-20 BlogDetay">
+                        <img src="~/img/blog/market.png" />
+                        <br />
+                        <ul style="padding-left: 0 !important; display:block; margin-top:20px; margin-bottom:10px;font-size: 13px;color: #d21e2b;">
+                            <li class="pull-left"><i class="fa fa-calendar"></i>Kas 27, 2019</li>
+                            <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i> Tüketici Hukuku</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <br />
+                        <p>Tüketici olarak günlük hayatımızda taksitle birçok alışveriş yapmaktayız. Bu alışverişlerin bir kısmında ise satıcı, ürünü teslim etmeden önce “senet” talep etmektedir. Peki nedir bu senetlerin hukuki mahiyeti?</p><p>Satıcıların tarafımıza imzalattığı senetlerin aslında neredeyse her kırtasiyede satılan “bono” olduğunu görmekteyiz. Zira bono ticari hayatın akışında da oldukça fazla kullanılan bir senet türüdür. Bunun sebebi olarak çok kolay bulunması gösterilebileceği gibi gerek tüzel kişiler arasında gerekse gerçek kişiler arasında diğer senet türlerinin çok fazla bilinmemesi gösterilebilir. Pekala bu gerekçe oldukça yerindedir.</p><p>Bono, kanunen emre yazılı senetlerdendir. Buna göre senet metninde “emrine” ifadesi yer almasa bile bu durum bononun niteliğini değiştirmeyecektir. Emre yazılı senetler ciro ve zilyetliğin devri ile devredilebilirler. Ciro, emre yazılı senetlere özgü bir devir şeklidir. Ciro, kural olarak senedin arkasına yapılır. Bu senedin arkası dolarsa ciro etmek için yeni bir kâğıt eklenir. Bu kâğıdın adı da alonjdur.&nbsp;</p>
+                        <p class="ql-align-center"><br></p>
+                        <p class="ql-align-center">
+                            <span style="background-color: transparent;">
+                                <img src="https://media-exp1.licdn.com/dms/image/C4D12AQE26Zvm2-8mQg/article-inline_image-shrink_1500_2232/0?e=1586995200&amp;v=beta&amp;t=bX59cUCW7pDtwXCFjVp8_ZXXCAqK1rEiehgHsmH-3rs" alt="Bu resim için metin sağlanmadı">
+                            </span>
+                        </p>
+                        <p>Yukarıda gördüğümüz senet klasik bir emre yazılı senettir.&nbsp;Burada en önemli konulardan bir tanesi de emre yazılı senetlerin “illetten mücerret” oluşudur. Bu durum, bononun, doğumuna neden olan asıl hukuki ilişkiden etkilenmediği anlamına gelmektedir. Bu tür senetlerde asıl borç ilişkisi geçersiz ise, bunu ispat etme yükü borçludadır. Ancak borçlu bu durumu ispat etse dahi asıl borç ilişkisinin geçersizliğini senedi iyiniyetle kazanan kişilere karşı ileri süremeyecektir. Özetle borcunu ödemiş bir kişi bonosunu geri almadıysa ve alacaklı bonoyu usulüne uygun bir şekilde CİRO yoluyla devretmişse, senedi devralan kişinin iyiniyetli olması halinde borçlu ikinci kez ödeme yapmak durumunda kalabilecektir. Yani kötü ödeme yapan tekrar öder diyebiliriz. Bu durumun borçlu açısından haksızlık doğuracağı düşünülebilirse de aksinin kabulü ticari hayatın durmasına sebep olabilecektir.</p><p>Tüketicilerin bilmesi gereken konu ise bir tüketici ilişkisi sebebiyle vermiş oldukları emre yazılı senedin iptalini görevli ve yetkili mahkemeden isteyebilecek olmalarıdır. Zira TKHK’un&nbsp;4/5. Maddesinde; <span style="background-color: transparent;">“Tüketicinin yapmış olduğu işlemler nedeniyle kıymetli evrak niteliğinde sadece nama yazılı ve her bir taksit ödemesi için ayrı ayrı olacak şekilde senet düzenlenebilir. Bu fıkra hükümlerine aykırı olarak düzenlenen senetler tüketici yönünden geçersizdir.” </span>Demektedir.</p><p>Kanun hükmünden de görüleceği üzere tüketici ile yalnızca her bir takside ayrı ayrı olmak kaydıyla NAMA YAZILI SENET düzenlenebilir. Nedir nama yazılı senet?&nbsp;</p><p>Nama yazılı senet TTK’da “belli bir kişinin adına yazılı olup da onun emrine kaydını içermeyen ve kanunen de emre yazılı senetlerden sayılmayan kıymetli evrak nama yazılı senet sayılır”&nbsp;şeklinde düzenlenmiştir. Bu kapsamda bononun üzerindeki “emrine” ifadesini çizerek senedi nama yazılı hale getirebileceğimiz gibi “ emre yazılı değildir, ciro edilemez, nama yazılıdır…” gibi menfi emre kaydı ekleyerek de&nbsp;“nama yazılı senet” haline getirebiliriz.&nbsp;</p><p>Ancak uygulamada ve doktrinde bu konu netlik kazanmış değildir. Kimi yazarlar emre ifadesinin çıkartılması ve menfi emre kaydının birlikte bulunması gerektiğini ileri sürerken kimi yazarlar ise senet metninde nama ifadesinin bulunması halinde ayrıca menfi emre kaydının eklenmesine gerek olmadığını savunmaktadırlar. Bende ikinci görüşe katılmaktayım ancak senedin aşağıdaki gibi düzenlenmesinin daha garanti ve ispata gerek vermeyen bir yapısı olduğu da tartışmasızdır.</p>
+                        <p class="ql-align-center"><br></p>
+                        <p class="ql-align-center"><span style="background-color: transparent;"><img src="https://media-exp1.licdn.com/dms/image/C4D12AQEc_K4FdTC2cQ/article-inline_image-shrink_1500_2232/0?e=1586995200&amp;v=beta&amp;t=s83QCuZML64LAmGstpEBalcEvWZNGRALBSzu1yuRzDs" alt="Bu resim için metin sağlanmadı"></span></p>
+                        <p>Nama yazılı senedin tüketiciye sağladığı en büyük avantaj devrinin <span style="background-color: transparent;">CİRO</span> yoluyla değil <span style="background-color: transparent;">ALACAĞIN TEMLİKİ </span>hükümlerine göre yapılmasıdır. Buna göre senedin devredilebilmesi için senet zilyetliğinin devri ve yazılı devir beyanına ihtiyaç vardır. Böylece borçlu(tüketici) devredene karşı sahip olduğu tüm def’ilerini senedi devralan üçüncü kişilere karşı ileri sürebilecektir. Burada senedi devralan üçüncü kişinin iyiniyetli olup olmaması herhangi bir önem taşımamaktadır. Senet hamili TTK 599. maddesi gereği kendisinin iyi niyetli hamil olduğu savunmasında bulunamaz.</p>
+                        <p><span style="background-color: transparent;">Yargıtay 13. Hukuk Dairesi’nin Esas No:2016/20529 Karar No:2018/2886 </span>sayılı kararında;</p>
+                        <p>“Nama yazılı senette hak sahibi olmayan bir kimseden iyiniyetle devir alındığı gerekçesiyle iktisap mümkün değildir. Senet hamili TTK 599. maddesi gereği kendisinin iyi niyetli hamil olduğu savunmasında bulunamaz... <span style="background-color: transparent;">DAVAYA KONU SENETLERİN LEHDAR YÖNÜNDEN KARŞILIKSIZ KALDIĞI SABİT OLDUĞUNA GÖRE İPTALLERİNE YÖNELİK TALEBİN DE KABULÜNE KARAR VERİLMESİ GEREKİRKEN </span>yazılı gerekçe ile reddine karar verilmesi usul ve yasaya aykırı olup bozma nedenidir.” Demektedir.</p>
+                        <p>Bu kapsamda tüketicilerin, satıcı ile imzalamış oldukları senedin özelliklerine dikkat etmesi gerekmektedir. Eğer imzaladıkları senet “emre yazılı senet” vasfını haiz ise bu senedin geçersiz olduğunu bilmeleri gerekmektedir.Ekte yer alan kararda satıcı, tüketici ile düzenlemiş olduğu nama yazılı senedi CİRO yoluyla devretmiş ve yerel mahkeme bu sebeple takibin iptaline karar vermiştir. Zira yukarıda da açıkça değindiğimiz gibi nama yazılı senet ancak alacağın temliği hükümlerine göre devredilebilir. Böyle bir senet ile ilgili hukuki yaptırım ile karşı karşıya kalan tüketicilerin alanında uzman hukukçulardan yardım alması yerinde olacaktır. Zira aksi taktirde ödeme yaptıkları senedi tekrar ödemek durumunda kalabilirler.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="blog-list-right">
+                    <div class="blog-list-left-heading">
+                        <h4>Son Yazılar</h4>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/hand-wash.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("covid19_salgini_karsisinda_isci_isveren_iliskisi", "Blog")">COVID-19 SALGINI KARŞISINDA İŞÇİ-İŞVEREN İLİŞKİSİ</a>
+                                <span>Mar 24, 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/market.png" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("tuketici_senedi_nasil_olmalidir", "Blog")">TÜKETİCİ SENEDİ NASIL OLMALIDIR?</a>
+                                <span>Kas 27, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/gemi.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin", "Blog")">GEMİ ADAMI ALACAKLARI, İHTİYATİ HACİZ VE REHİN</a>
+                                <span>Kas 22, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .BlogDetay.text-content-big p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #555 !important;
+        line-height: 22px !important;
+        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .BlogDetay {
+        color: #555 !important;
+        text-align: justify
+    }
+
+        .BlogDetay.text-content-big ul {
+            padding-left: 50px !important;
+            margin-bottom: 20px !important;
+            margin-right: 15px !important;
+        }
+</style>
+

@@ -8,26 +8,9 @@ namespace CanbulutHukuk.Web.Controllers
     public class BlogController : Controller
     {
         // GET: Blog
-        public ActionResult Index(int Category = -1, int Etiket = -1)
+        public ActionResult Index()
         {
-            var dataContext = new PetaPoco.Database("sqlserverce");
-            BlogIndexVm vm = new BlogIndexVm()
-            {
-                BlogList = dataContext.Query<Article>("Select Article.*,Category.Name as CategoryName from Article inner join Category on Category.Id = Article.CategoryId where Article.IsActive = 1 and (@0 = -1 or Article.CategoryId = @0) order by Article.ReleaseDate desc", Category).ToList(),
-                LastBlogList = dataContext.Query<Article>("Select top 3 Article.*,Category.Name as CategoryName  from Article inner join Category on Category.Id = Article.CategoryId where Article.IsActive = 1 order by Article.ReleaseDate desc").ToList(),
-                CategoryList = dataContext.Query<Category>("Select * from Category where IsActive = 1 order by Name").ToList(),
-                TagList = dataContext.Query<Tags>("Select * from Tags where IsActive = 1 order by Name").ToList()
-            };
-
-            //BlogIndexVm vm = new BlogIndexVm()
-            //{
-            //    BlogList = new List<Article>(),
-            //    LastBlogList = new List<Article>(),
-            //    CategoryList = new List<Category>(),
-            //    TagList = new List<Tags>()
-            //};
-
-            return View(vm);
+            return View();
         }
 
         [HttpPost]
@@ -79,6 +62,36 @@ namespace CanbulutHukuk.Web.Controllers
             //};
 
             return View(vm);
+        }
+
+        public ActionResult covid19_salgini_karsisinda_isci_isveren_iliskisi()
+        {
+            return View();
+        }
+
+        public ActionResult tuketici_senedi_nasil_olmalidir()
+        {
+            return View();
+        }
+
+        public ActionResult gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin()
+        {
+            return View();
+        }
+
+        public ActionResult ceza_kosulu()
+        {
+            return View();
+        }
+
+        public ActionResult borclunun_temeddudunde_sozlesmeden_donme()
+        {
+            return View();
+        }
+
+        public ActionResult bedelli_askerlikte_kidem_tazminati()
+        {
+            return View();
         }
     }
 }

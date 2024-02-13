@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Blog Detay</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Blog", new {})">Blog Yazılarımız</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 pr-30-md">
+                <div class="pr-30-md">
+                    <div class="section-heading">
+                        <h4>CEZA KOŞULU</h4>
+                    </div>
+                    <div class="section-heading-line-left"></div>
+                    <div class="text-content-big mt-20 BlogDetay">
+                        <img src="~/img/blog/sozlesme.jpg" />
+                        <br />
+                        <ul style="padding-left: 0 !important; display:block; margin-top:20px; margin-bottom:10px;font-size: 13px;color: #d21e2b;">
+                            <li class="pull-left"><i class="fa fa-calendar"></i>Haz 13, 2019</li>
+                            <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i> Borçlar Hukuku</li>
+                        </ul>
+                        <div class="clearfix"></div><br>
+                        <p class="ql-align-justify">Ceza koşulu, alacaklının uğraması muhtemel zararlarını güvence altına almak amacıyla tarafların anlaşması sonucu sözleşmeye eklenmiş bir yaptırımdır. Burada ceza koşulunun genel olarak “teminat” özelliğinden bahsetmek mümkün olacaktır.</p>
+                        <p class="ql-align-justify">Ceza koşulu, asıl alacağa bağlı fer’î bir alacaktır. Bu doğrultuda ayrıca dava ve talep edilmesi söz konusu olamaz. Buna bağlı olarak da dava ve talep edilmesi mümkün olmayan bir asıl alacak için ceza koşulu da talep edilemeyecektir. Burada aklımıza eksik borçlar gelebilir. Ancak her eksik borç açısından ceza koşulu talep edilemez diyemeyiz. Zira bahis ve kumar sonucu doğmuş bir eksik borç için getirilen ceza koşulu geçersiz olurken zamanaşımına uğramış alacaklar bakımından getirilen ceza koşulu geçerli olacaktır.</p>
+                        <p class="ql-align-justify">TBK m.179’da ceza koşulunun türleri sayılmıştır. Bunlar seçimlik, ifaya eklenen ve dönme ceza koşuludur. Seçimlik ceza koşulu, bir sözleşmenin hiç veya gereği gibi ifa edilmemesi durumu için kararlaştırılmıştır. Burada alacaklı sözleşmeden aksi anlaşılmadığı taktirde ya borcun ya da ifanın yerine getirilmesini isteyebilecektir. İfaya eklenen ceza koşulu ise borcun belirlenen zaman veya yerde ifa edilmemesi durumu için kararlaştırılmıştır. Bu durumda alacaklı, hem borcun hemde cezanın ifa edilmesini talep edebilecektir. Seçimlik ceza ve ifaya eklenen ceza koşulu bakımından kanun hükmünde yer alan düzenlemeler emredici nitelikte değildir. Taraflar başkaca borca aykırılık türleri bakımından da ceza koşulu kararlaştırabilirler. Bu iki ceza koşulu bakımından ceza koşulunun teminat özelliğinden bahsetmek mümkündür. Zira burada borcun teminat altına alınması hedeflenmiştir. Böylece borçlu ceza koşulunu caydırıcı bulacak ve borcu ifa etmeye çalışacaktır. Ancak dönme cezası bakımından böyle bir durum söz konusu değildir. Şöyle ki; dönme cezası borçluya cezayı ödeyerek sözleşmeden dönme hakkı tanımaktadır. Bu hakkınu kullanan borçlu artık sözleşmenin tarafı olmaktan kurtulacaktır. Bu doğrultuda borcun teminat altına alındığı söylenemeyecektir.</p>
+                        <p class="ql-align-justify">Ceza koşulunun talep edilebilmesi için alacaklının herhahngi bir zarara uğramasına gerek yoktur. Ortada zarar söz konusu olmasa dahi şartları gerçekleştiği taktirde ceza koşulu talep edilebilecektir. Bunun sebebi tarafların ceza koşulunu belirlerken olası tüm ihtimalleri ve zararları dikkate almış olmalarıdır. Ancak çoğu zaman tarafların yanlış hesaplamaları sonucu, sözleşmeye aykırılık sebebiyle meydana gelen zarar ceza koşulunu aşmaktadır. Bu durumda alacaklı cezayı aşan zararını da tazmin etmek isteyecektir. Bu noktada TBK m.180/2 uyarınca alacaklı ceza tutarını aşan zararını ve borçlunun kusurunu ispat etmek durumundadır. Genel kural olarak TBK m.112 uyarınca borçlu kusursuz olduğunu ispat etmekle yükümlüyken burada kanun koyucu ispat külfetini alacaklı üzerine yüklemiştir. Zira ceza koşulunun talep edilebilmesi için genel kural olarak zararın ve kusurun ispat edilmesine gerek yoktur. Ancak burada alacaklı fazladan bir talepte bulunmaktadır. Dolayısıyla talebini ispat etmesi gerekmektedir. Bununla birlikte kanunumuzda “adam çalıştıranın sorumluluğu” gibi bir takım kusursuz sorumluluk halleri belirlenmiştir. Bu hallerin varlığı halinde alacaklı kusuru ispat etmek zorunda değildir.</p>
+                        <p class="ql-align-justify">Taraflar ceza koşulunun bedelini belirlemekte özgür olmalarına karşın bu bedelin fahiş olması halinde hakim re’sen indirime gidebilecektir. Ancak tabi ki uygulamada borçlunun bu yönde bir iddiası olması gerekmektedir.&nbsp;Bununla birlikte tacirler açısından TTK’da bir takım sınırlamalar getirilmiştir. Buna göre tacirler, basiretli bir iş adamı gibi davranmak durumunda oldukları için fahiş ceza koşulunun indirilmesini isteyemeyeceklerdir. Yargıtay kararlarına baktığımızda ise TTK da belirlenen ilgili hükmün emredici bir kural olmadığını görmekteyiz. Zira Yargıtay içtihatları doğrultusunda, ceza koşulunun ahlaka ve adaba aykırı olması, tacirin iktisadi yönden çöküşüne sebep olması gibi hallerin varlığında caza koşulunun kısmen yahut tamamen indirilmesine gidilebilecektir. Herkes, haklarını kullanırken ve borçlarını yerine getirirken dürüstlük kurallarına uymak zorundadır. Aksi taktirde kanun bu hakkı korumayacaktır.</p>
+                        <p><br></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="blog-list-right">
+                    <div class="blog-list-left-heading">
+                        <h4>Son Yazılar</h4>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/hand-wash.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("covid19_salgini_karsisinda_isci_isveren_iliskisi", "Blog")">COVID-19 SALGINI KARŞISINDA İŞÇİ-İŞVEREN İLİŞKİSİ</a>
+                                <span>Mar 24, 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/market.png" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("tuketici_senedi_nasil_olmalidir", "Blog")">TÜKETİCİ SENEDİ NASIL OLMALIDIR?</a>
+                                <span>Kas 27, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/gemi.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin", "Blog")">GEMİ ADAMI ALACAKLARI, İHTİYATİ HACİZ VE REHİN</a>
+                                <span>Kas 22, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .BlogDetay.text-content-big p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #555 !important;
+        line-height: 22px !important;
+        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .BlogDetay {
+        color: #555 !important;
+        text-align: justify
+    }
+
+        .BlogDetay.text-content-big ul {
+            padding-left: 50px !important;
+            margin-bottom: 20px !important;
+            margin-right: 15px !important;
+        }
+</style>
+

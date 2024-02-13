@@ -202,9 +202,12 @@
     <Content Include="img\blog-4.jpg" />
     <Content Include="img\blog-5.jpg" />
     <Content Include="img\blog-6.jpg" />
-    <Content Include="img\blog\blog1.jpg" />
-    <Content Include="img\blog\blog2.jpg" />
-    <Content Include="img\blog\blog3.jpg" />
+    <Content Include="img\blog\gemi.jpg" />
+    <Content Include="img\blog\hand-wash.jpg" />
+    <Content Include="img\blog\market.png" />
+    <Content Include="img\blog\ucak.jpg" />
+    <Content Include="img\blog\coin.jpg" />
+    <Content Include="img\blog\sozlesme.jpg" />
     <Content Include="img\kurumsal.jpg" />
     <Content Include="img\list-1.jpg" />
     <Content Include="img\logos\logo.png" />
@@ -430,6 +433,12 @@
     <Content Include="Views\Hizmetlerimiz\TicaretHukuku.cshtml" />
     <Content Include="Views\Hizmetlerimiz\TuketiciHukuku.cshtml" />
     <Content Include="Views\Hizmetlerimiz\VergiHukuku.cshtml" />
+    <Content Include="Views\Blog\tuketici_senedi_nasil_olmalidir.cshtml" />
+    <Content Include="Views\Blog\covid19_salgini_karsisinda_isci_isveren_iliskisi.cshtml" />
+    <Content Include="Views\Blog\gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin.cshtml" />
+    <Content Include="Views\Blog\bedelli_askerlikte_kidem_tazminati.cshtml" />
+    <Content Include="Views\Blog\ceza_kosulu.cshtml" />
+    <Content Include="Views\Blog\borclunun_temeddudunde_sozlesmeden_donme.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
