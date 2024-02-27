@@ -8483,6 +8483,7 @@ footer {
     #MobilLeftMenu .menuBox {
         width: 45% !important;
         margin-left: 5px !important;
+        height: 28% !important;
     }
 }
 @media (max-width:370px) {
