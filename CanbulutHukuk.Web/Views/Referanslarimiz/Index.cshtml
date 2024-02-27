@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-title-section" style="background-image: url(img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Hizmetlerimiz</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Referanslarimiz", new {})">Referanslarımız</a></li>
+        </ul>
+    </div>
+</div>
+<div class="section-block">
+    <div class="container">
+        <div class="section-heading center-holder">
+            <span>Canbulut Hukuk & Danışmanlık</span>
+            <h3>Referanslarımız</h3>
+            <div class="section-heading-line"></div>
+        </div>
+        <div class="row mt-50">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box" style="background-color: #0f3555">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/alfasolar-logo.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/alfakazan.png" style="margin:auto;display:block;" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/deberenn.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/retro.png" style="width:230px; height:100px" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box" style="background-color: #fe0000">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/eskassan.jpeg" style="height:150px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box" style="background-color: #ca1f26">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/gokkusagi.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/hassiad.png" style="margin-top:30px" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="service-box">
+                    <div class="service-inner-box clearfix">
+                        <img src="~/img/reference/boren.jpeg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End home-about Area -->
+<style>
+    .service-box h3 {
+        color: #111;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+    .service-inner-box {
+        padding: 20px 20px 20px 20px !important;
+    }
+    .service-box {
+        height: 150px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

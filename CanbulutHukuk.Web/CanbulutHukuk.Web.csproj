@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HizmetlerimizController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\ReferanslarimizController.cs" />
     <Compile Include="Controllers\SevgiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,7 +212,17 @@
     <Content Include="img\kurumsal.jpg" />
     <Content Include="img\list-1.jpg" />
     <Content Include="img\logos\logo.png" />
+    <Content Include="img\partner\busra_pp.jpeg" />
     <Content Include="img\partner\partner1.jpeg" />
+    <Content Include="img\partner\sule_pp.jpeg" />
+    <Content Include="img\reference\alfakazan.png" />
+    <Content Include="img\reference\alfasolar-logo.png" />
+    <Content Include="img\reference\boren.jpeg" />
+    <Content Include="img\reference\deberenn.jpg" />
+    <Content Include="img\reference\eskassan.jpeg" />
+    <Content Include="img\reference\gokkusagi.png" />
+    <Content Include="img\reference\hassiad.png" />
+    <Content Include="img\reference\retro.png" />
     <Content Include="img\slider\slide0.jpg" />
     <Content Include="img\slider\slide13.jpg" />
     <Content Include="js\bootstrap.min.js" />
@@ -439,6 +450,7 @@
     <Content Include="Views\Blog\bedelli_askerlikte_kidem_tazminati.cshtml" />
     <Content Include="Views\Blog\ceza_kosulu.cshtml" />
     <Content Include="Views\Blog\borclunun_temeddudunde_sozlesmeden_donme.cshtml" />
+    <Content Include="Views\Referanslarimiz\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
