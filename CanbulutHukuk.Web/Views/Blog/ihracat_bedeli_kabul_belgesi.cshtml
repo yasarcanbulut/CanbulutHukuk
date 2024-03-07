@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-title-section" style="background-image: url(/img/bg/pagetitle.jpg);">
+    <div class="container">
+        <h1>Blog Detay</h1>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home", new {})">Anasayfa</a></li>
+            <li><a href="@Url.Action("Index", "Blog", new {})">Blog Yazılarımız</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-12 pr-30-md">
+                <div class="pr-30-md">
+                    <div class="section-heading">
+                        <h4>İHRACAT BEDELİ KABUL BELGESİ (İBKB)</h4>
+                    </div>
+                    <div class="section-heading-line-left"></div>
+                    <div class="text-content-big mt-20 BlogDetay">
+                        <img src="~/img/blog/container.jpg" />
+                        <br />
+                        <ul style="padding-left: 0 !important; display:block; margin-top:20px; margin-bottom:10px;font-size: 13px;color: #d21e2b;">
+                            <li class="pull-left"><i class="fa fa-calendar"></i>Mar 07, 2024</li>
+                            <li class="pull-left" style="margin-left:25px;"><i class="fa fa-list-ul"></i> Ceza Hukuku</li>
+                        </ul>
+                        <div class="clearfix"></div><br>
+                        <p class="ql-align-justify">İBKB; İhracatçıların, ihracat bedellerini yurda getirdiklerinin ispatı olarak bedelin geldiği bankaca düzenlenen belgedir. Peki bu belge neden önemlidir?  </p>
+                        <p class="ql-align-justify"><strong>1567 sayılı Türk Parasının Kıymetini Koruma Hakkında Kanun’un 3/3. </strong>Maddesinde;</p>
+                        <p class="ql-align-justify">"Her türlü mal, kıymet, hizmet ve sermaye ithal ve ihraç edenler veya bu işlere aracılık edenlerden bu işlemlerinden doğan alacaklarını 1 inci maddeye göre alınan kararlardaki hükümlere göre ve bu kararlarda tayin edilen süreler içinde yurda getirmeyenler, yurda getirmekle yükümlü oldukları kıymetlerin rayiç bedelinin yüzde beşi kadar idarî para cezasıyla cezalandırılırlar." Demektedir. </p>
+                        <p class="ql-align-justify">Görüleceği gibi ihracat bedellerinin yurda getirilmesi zorunludur. Burada tabi ki ihracat yapılan ülkeye göre bedelin ne kadarının yurda getirilmesi gerekeceği değişmektedir.<strong>(Bknz. İhracat Genelgesi Ek.2 ve Ek.3) </strong>Ancak asıl vurgulamaya çalıştığımız husus, özellikle kaçakçılığın önlenmesi için bedelin kanunlar kapsamında yurda getirilmiş olması gerektiğidir.</p>
+                        <p class="ql-align-justify">İhracat yapan firmalar ise kanuna uygun davrandıklarını ve bedeli yurda getirdiklerini İBKB ile ispatlamaktadırlar. Bu sebeple cezai işlem uygulanmasının önüne geçmek adına süresinde İBKB düzenlenmesi önemlidir. İlgili bedellerin takibi ise şu şekilde olmaktadır;</p>
+                        <p class="ql-align-justify">	1-Vergi dairesi, ihracat beyannamesinden ihraç tarihini tespit eder.</p>
+                        <p class="ql-align-justify">    2-İhracat beyannamesinde yer alan ödeme yapılacak olan bankaya “ihraç tarihinden 180 gün sonra” müzekkere yazarak İBKB düzenlenip düzenlenmediğini sorar.</p>
+                        <p class="ql-align-justify">	3-İBKB düzenlenmedi ise bedelin yurda getirilmediğini kabul ederek ihracat yapan firmaya müzekkere yazar ve bedelin yurda getirilmesi için firmaya 90 günlük süre verir.</p>
+                        <p class="ql-align-justify">	4-Bu süre zarfında İBKB düzenlenmez yahut mücbir sebebin varlığı ileri sürülerek vergi dairesinden süre istenmez ise vergi dairesi ilgili savcılığa ihbarda bulunur.</p>
+                        <p class="ql-align-justify">	5-İlgili savcılık , ihracat yapan firma hakkında idari para cezası uygulanmasına karar verir.</p>
+                        <p class="ql-align-justify">Buradaki işlemler silsilesi içerinde genel olarak vergi dairesi şekli bir inceleme yaptığı için usulsüz cezai işlemler uygulandığı görülmektedir. Örneğin, ihracat bedelinin “elden” tahsil edilmiş olması halinde ilgili bankalar İBKB düzenlememektedir. Bu durumda ise vergi daireleri salt İBKB düzenlenmediğinden ilgili firma aleyhinde ihbarda bulunmaktadır. Burada aslında yapılması gereken İBKB düzenlenmemiş olsa dahi bedelin yurda getirilip getirilmediği noktasında esaslı bir inceleme yapılması gerektiğidir.</p>
+                        <p class="ql-align-justify">Yine aynı şekilde ihracat yapıldığı halde bedelinin tahsil edilemediği yahut tarafların davalık olduğu durumlar da söz konusu olabilmektedir. Ancak vergi dairesi yine şekli bir inceleme yaptığı için ihraç tarihinden itibaren 180 gün geçmiş ise doğrudan ihbarda bulunmaktadır. Halbuki tahsil edilmeyen bir bedel bakımından bedelin yurda getirilmesi gibi bir zorunluluk bulunmamaktadır. Zira  <strong>2018-32/48 sayılı tebliğin 3. maddesinde;</strong></p>
+                        <p class="ql-align-justify">"Türkiye’de yerleşik kişiler tarafından gerçekleştirilen ihracat işlemlerine ilişkin bedeller, ithalatçının ödemesini müteakip doğrudan ve gecikmeksizin ihracata aracılık eden bankaya transfer edilir veya getirilir." demektedir. Görüleceği gibi ihracat bedelinin tahsil edilmiş olması yasal sürelerin başlaması için bir başka ön şarttır.</p>
+                        <p class="ql-align-justify">Tüm bu açıklamalarımızdan sonra özetlemek gerekirse;</p>
+                        <p class="ql-align-justify">	-İBKB düzenlenmesi zorunlu olmakla birlikte birtakım sebeplerle düzenlenememiş olabilir. Cezai işlem uygulanmaması için bedelin yurda getirilmiş olması yeterlidir.</p>
+                        <p class="ql-align-justify">	-İhracat yapıldıktan sonra bedel tahsil edilmiş ise yasal süreler başlamaktadır. Tahsil edilmeyen bir bedel bakımından cezai işlem uygulanması mümkün değildir.</p>
+                        <p class="ql-align-justify">	-Vergi dairesi, ihracat yapan firmaya 90 günlük süre vermeden savcılığa ihbarda bulunamayacaktır.</p>
+                        <p class="ql-align-justify">Örnek kararlarımızın bu anlamda incelenmesi önemlidir. Örneğin Ankara 3. Sulh Ceza Hakimliğinin 2023/12310D.İş. sayılı dosyasında ihracat bedelinin yurda getirildiği dekontlarla ispatlandığı halde İBKB düzenlenmediği için cezai işlem uygulanmış ve bu idari para cezası mahkeme tarafından iptal edilmiştir. Yine Elmadağ Sulh Ceza Hakimliğinin 2023/187 D.İş. sayılı dosyasında “tahsilat oldukça geç yapıldığı” halde ihracat bedelinin süresinde yurda getirilmediğinden bahisle cezai işlem uygulanmış ve bu ceza mahkeme tarafından iptal edilmiştir. İlgili kararlar için ofisimizle iletişime geçebilirsiniz. </p>
+                        <p class="ql-align-justify"><strong></strong></p>
+                        
+                        <p><br></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-12">
+                <div class="blog-list-right">
+                    <div class="blog-list-left-heading">
+                        <h4>Son Yazılar</h4>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/container.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("ihracat_bedeli_kabul_belgesi", "Blog")">İHRACAT BEDELİ KABUL BELGESİ (İBKB)</a>
+                                <span>Mar 07, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/market.png" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("tuketici_senedi_nasil_olmalidir", "Blog")">TÜKETİCİ SENEDİ NASIL OLMALIDIR?</a>
+                                <span>Kas 27, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-posts">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-5 col-4 latest-posts-img"> <img src="~/img/blog/gemi.jpg" alt="blog-img"> </div>
+                            <div class="col-md-7 col-sm-7 col-8 latest-posts-text pl-0">
+                                <a href="@Url.Action("gemi_adami_alacaklari_ihtiyati_haciz_ve_rehin", "Blog")">GEMİ ADAMI ALACAKLARI, İHTİYATİ HACİZ VE REHİN</a>
+                                <span>Kas 22, 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .BlogDetay.text-content-big p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #555 !important;
+        line-height: 22px !important;
+        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .BlogDetay {
+        color: #555 !important;
+        text-align: justify
+    }
+
+        .BlogDetay.text-content-big ul {
+            padding-left: 50px !important;
+            margin-bottom: 20px !important;
+            margin-right: 15px !important;
+        }
+</style>

@@ -39,5 +39,10 @@ namespace CanbulutHukuk.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult ihracat_bedeli_kabul_belgesi()
+        {
+            return View();
+        }
     }
 }
