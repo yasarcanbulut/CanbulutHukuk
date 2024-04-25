@@ -216,6 +216,7 @@
     <Content Include="img\partner\busra_pp.jpeg" />
     <Content Include="img\partner\partner1.jpeg" />
     <Content Include="img\partner\sule_pp.jpeg" />
+    <Content Include="img\reference\aksem.jpg" />
     <Content Include="img\reference\alfakazan.png" />
     <Content Include="img\reference\alfasolar-logo.png" />
     <Content Include="img\reference\boren.jpeg" />
@@ -226,6 +227,8 @@
     <Content Include="img\reference\hassiad.png" />
     <Content Include="img\reference\retro.png" />
     <Content Include="img\reference\selnur.jpeg" />
+    <Content Include="img\reference\tipor.jpg" />
+    <Content Include="img\reference\vahittur.jpg" />
     <Content Include="img\slider\slide0.jpg" />
     <Content Include="img\slider\slide13.jpg" />
     <Content Include="js\bootstrap.min.js" />
