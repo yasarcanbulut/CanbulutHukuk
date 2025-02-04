@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Canbulut Hukuk\\source\\repos\\CanbulutHukuk\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34EA6EF4-B48B-437F-9335-5D618242D09C}|CanbulutHukuk.Web\\CanbulutHukuk.Web.csproj|C:\\Users\\Canbulut Hukuk\\source\\repos\\CanbulutHukuk\\canbuluthukuk.web\\views\\referanslarimiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{34EA6EF4-B48B-437F-9335-5D618242D09C}|CanbulutHukuk.Web\\CanbulutHukuk.Web.csproj|c:\\users\\canbulut hukuk\\source\\repos\\canbuluthukuk\\canbuluthukuk.web\\views\\referanslarimiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{34EA6EF4-B48B-437F-9335-5D618242D09C}|CanbulutHukuk.Web\\CanbulutHukuk.Web.csproj|solutionrelative:canbuluthukuk.web\\views\\referanslarimiz\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -82,8 +82,7 @@
               "RelativeToolTip": "CanbulutHukuk.Web\\Views\\Iletisim\\Index.cshtml",
               "ViewState": "AQIAAAwAAAAAAAAAAAAhwBsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-24T13:54:25.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T13:54:25.035Z"
             },
             {
               "$type": "Document",
@@ -93,7 +92,7 @@
               "RelativeDocumentMoniker": "CanbulutHukuk.Web\\Views\\Referanslarimiz\\Index.cshtml",
               "ToolTip": "C:\\Users\\Canbulut Hukuk\\source\\repos\\CanbulutHukuk\\CanbulutHukuk.Web\\Views\\Referanslarimiz\\Index.cshtml",
               "RelativeToolTip": "CanbulutHukuk.Web\\Views\\Referanslarimiz\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAE4AAAASAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAAIAAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-24T13:46:46.531Z",
               "EditorCaption": ""

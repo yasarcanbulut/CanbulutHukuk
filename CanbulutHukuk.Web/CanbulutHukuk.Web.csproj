@@ -219,12 +219,15 @@
     <Content Include="img\reference\aksem.jpg" />
     <Content Include="img\reference\alfakazan.png" />
     <Content Include="img\reference\alfasolar-logo.png" />
+    <Content Include="img\reference\ankarayem.png" />
     <Content Include="img\reference\boren.jpeg" />
     <Content Include="img\reference\deberenn.jpg" />
     <Content Include="img\reference\eskassan.jpeg" />
     <Content Include="img\reference\gokkusagi.png" />
-    <Content Include="img\reference\hadaka.jpeg" />
     <Content Include="img\reference\hassiad.png" />
+    <Content Include="img\reference\icasifedLogo.png" />
+    <Content Include="img\reference\hadaka.jpg" />
+    <Content Include="img\reference\quatro.jpeg" />
     <Content Include="img\reference\retro.png" />
     <Content Include="img\reference\selnur.jpeg" />
     <Content Include="img\reference\tipor.jpg" />
